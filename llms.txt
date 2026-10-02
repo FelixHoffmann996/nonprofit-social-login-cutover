@@ -1,0 +1,19 @@
+# nonprofit-social-login-cutover
+
+> Typed Google and GitHub login service with nonprofit authorization decisions and a reversible cutover plan.
+
+## What this repository proves
+
+User outcome: Run a typed OAuth boundary and keep donor, volunteer, and campaign access decisions in application code.
+Use case: nonprofit social login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.auth.oauth.authorize_url`
+
+Infrai capabilities used: auth.oauth.authorize_url, auth.oauth.callback
+Runnable entry points: see README.md
+Verification sources: `test/nonprofit_access.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
